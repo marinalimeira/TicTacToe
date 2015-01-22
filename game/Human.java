@@ -11,13 +11,13 @@ import java.io.InputStreamReader;
  */
 public class Human extends Player {
 
-	public Human(String symbol){
+	public Human(String symbol) {
 		super(symbol);
 	}
-	
-	public Human(){		
+
+	public Human() {
 	}
-	
+
 	public void makePlay() {
 		String input = null;
 		while (true) {
@@ -29,16 +29,7 @@ public class Human extends Player {
 				System.out.println("Error " + e);
 			}
 
-			/*
-			 * se não foi feita ainda essa jogada pelo player e ela esta
-			 * disponivel no jogo
-			 */
-			if (!super.getPlays().contains(input)
-					&& TicTacToe.getInstance().getCardGame().contains(input)) {
-				super.getPlays().add(input);
-				TicTacToe.getInstance().getCardGame().remove(input);
-				TicTacToe.getInstance().updateCardGame(Integer.parseInt(input)-1, super.getSymbol());
-				
+			if (super.verifyPlay(input)) {
 				break;
 			} else {
 				System.out.println("You can't do this move! Try again.");
