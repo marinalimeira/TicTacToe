@@ -27,7 +27,7 @@ public class TicTacToeGame {
 			}
 		}
 		if (!p1.verifyWin() && !p2.verifyWin()) {
-			System.out.println("");
+			System.out.println("Tie ):");
 		}
 		TicTacToe.getInstance().showCardGame();
 	}
