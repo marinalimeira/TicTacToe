@@ -9,16 +9,18 @@ import java.util.ArrayList;
  */
 public abstract class Player {
 
-	private ArrayList<String> plays = new ArrayList<String>();
+	private ArrayList<String> plays;
 
-	private String symbol = "?";
+	private String symbol;
 
 	public Player(String symbol) {
 		this.symbol = symbol;
+        plays = new ArrayList<String>();
 	}
 
 	public Player() {
-
+        this.symbol = "?";
+        plays = new ArrayList<String>();
 	}
 
 	public abstract void makePlay();
