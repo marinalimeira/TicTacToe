@@ -9,22 +9,25 @@ import java.util.ArrayList;
  */
 public abstract class Player {
 
-	private ArrayList<String> plays;
+	private ArrayList<String> plays = new ArrayList<String>();
 
-	private String symbol;
+	private String symbol = "?";
 
 	public Player(String symbol) {
 		this.symbol = symbol;
-        plays = new ArrayList<String>();
 	}
 
 	public Player() {
-        this.symbol = "?";
-        plays = new ArrayList<String>();
+
 	}
 
-	public abstract void makePlay();
+	public String makePlay(int x, int y){
+		return "";
+	}
 
+	public void makePlay(){
+	}
+	
 	/*
 	 * Verifica se não foi feita ainda essa jogada pelo player e ela esta
 	 * disponivel no jogo
@@ -34,8 +37,7 @@ public abstract class Player {
 				&& TicTacToe.getInstance().getCardGame().contains(play)) {
 			getPlays().add(play);
 			TicTacToe.getInstance().getCardGame().remove(play);
-			TicTacToe.getInstance().updateCardGame(Integer.parseInt(play) - 1,
-					getSymbol());
+			//ADICIONA AQUI O coisa
 			return true;
 		} else {
 			return false;

@@ -1,14 +1,16 @@
 <!--You have to create a folder called "bin" to run this file.-->
 <project name="TicTacToe" default="run" basedir="bin"> 
 	<property name="src" value="game"/>
-	<property name="mainClass" value="TicTacToeGame"/>
+	<property name="mainClass" value="TicTacToeGameGUI"/>
 
 	<target name="clean">
 		<delete dir="../bin"/>
 	</target>
-
+	
 	<target name="build" depends="clean">
 		<mkdir dir="../bin"/>
+		<copyfile src="../${src}/X.png" dest="../bin/X.png"/>
+		<copyfile src="../${src}/O.png" dest="../bin/O.png"/>
 	</target>
 
 	<target name="compile" depends="build"> 
