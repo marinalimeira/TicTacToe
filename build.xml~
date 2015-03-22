@@ -26,8 +26,8 @@
 			<manifest>  
            			<attribute name="Main-Class" value="${src}/${mainClass}"/>             
         		</manifest>  
-			<fileset file="${src}/O.png" />
-			<fileset file="${src}/X.png" />
+			<fileset file="O.png" />
+			<fileset file="X.png" />
 		</jar>
 	</target>
 

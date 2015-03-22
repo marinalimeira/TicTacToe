@@ -1,4 +1,4 @@
-package game;
+package com.game;
 
 import java.awt.Color;
 import java.awt.Graphics;
@@ -24,8 +24,9 @@ public class TicTacToe extends JPanel{
 	
 	/* o que vai conter os valores para controle */
 	private ArrayList<String> cardGame = new ArrayList<String>();
-	
-    private String[][] winningPlays = { { "1", "2", "3" }, { "4", "5", "6" },
+	/* o que vai mostrar para o usuario */
+	//private ArrayList<String> realCardGame = new ArrayList<String>();
+	private String[][] winningPlays = { { "1", "2", "3" }, { "4", "5", "6" },
 			{ "7", "8", "9" }, { "1", "4", "7" }, { "2", "5", "8" },
 			{ "3", "6", "9" }, { "1", "5", "9" }, { "3", "5", "7" } };
 	
